@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bilet_Uygulamasi.Page.VoyageAdd"
+               Title="SEFER EKLEME SAYFASI">
+    <Grid HorizontalOptions="Center" >
+
+
+        <StackLayout Grid.Row="1" Margin="50" Spacing="20" >
+
+            <Label Text="Tarih:" FontSize="18" />
+            <DatePicker
+                x:Name="MyDatePicker"
+                DateSelected="DatePicker_DateSelected"
+                HorizontalOptions="Start"
+                   WidthRequest="500"
+                    HeightRequest="50" />
+
+            <Label Text="Saat:" FontSize="18" />
+            <TimePicker x:Name="TimePicker" Format="HH:mm" />
+           
+            <Label Text="Kalkış Noktası:" FontSize="18" />
+            <Picker
+                WidthRequest="500"
+                HeightRequest="50" 
+                x:Name="KalkisYeri">
+                <Picker.ItemsSource >
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Adana</x:String>
+                        <x:String>Adıyaman</x:String>
+                        <x:String>Afyonkarahisar</x:String>
+                        <x:String>Ağrı</x:String>
+                        <x:String>Amasya</x:String>
+                        <x:String>Ankara</x:String>
+                        <x:String>Antalya</x:String>
+                        <x:String>Artvin</x:String>
+                        <x:String>Aydın</x:String>
+                        <x:String>Balıkesir</x:String>
+                        <x:String>Bilecik</x:String>
+                        <x:String>Bingöl</x:String>
+                        <x:String>Bitlis</x:String>
+                        <x:String>Bolu</x:String>
+                        <x:String>Burdur</x:String>
+                        <x:String>Bursa</x:String>
+                        <x:String>Çanakkale</x:String>
+                        <x:String>Çankırı</x:String>
+                        <x:String>Çorum</x:String>
+                        <x:String>Denizli</x:String>
+                        <x:String>Diyarbakır</x:String>
+                        <x:String>Edirne</x:String>
+                        <x:String>Elazığ</x:String>
+                        <x:String>Erzincan</x:String>
+                        <x:String>Erzurum</x:String>
+                        <x:String>Eskişehir</x:String>
+                        <x:String>Gaziantep</x:String>
+                        <x:String>Giresun</x:String>
+                        <x:String>Gümüşhane</x:String>
+                        <x:String>Hakkari</x:String>
+                        <x:String>Hatay</x:String>
+                        <x:String>Isparta</x:String>
+                        <x:String>Mersin</x:String>
+                        <x:String>İstanbul</x:String>
+                        <x:String>İzmir</x:String>
+                        <x:String>Kars</x:String>
+                        <x:String>Kastamonu</x:String>
+                        <x:String>Kayseri</x:String>
+                        <x:String>Kırklareli</x:String>
+                        <x:String>Kırşehir</x:String>
+                        <x:String>Kocaeli</x:String>
+                        <x:String>Konya</x:String>
+                        <x:String>Kütahya</x:String>
+                        <x:String>Malatya</x:String>
+                        <x:String>Manisa</x:String>
+                        <x:String>Kahramanmaraş</x:String>
+                        <x:String>Mardin</x:String>
+                        <x:String>Muğla</x:String>
+                        <x:String>Muş</x:String>
+                        <x:String>Nevşehir</x:String>
+                        <x:String>Niğde</x:String>
+                        <x:String>Ordu</x:String>
+                        <x:String>Rize</x:String>
+                        <x:String>Sakarya</x:String>
+                        <x:String>Samsun</x:String>
+                        <x:String>Siirt</x:String>
+                        <x:String>Sinop</x:String>
+                        <x:String>Sivas</x:String>
+                        <x:String>Tekirdağ</x:String>
+                        <x:String>Tokat</x:String>
+                        <x:String>Trabzon</x:String>
+                        <x:String>Tunceli</x:String>
+                        <x:String>Şanlıurfa</x:String>
+                        <x:String>Uşak</x:String>
+                        <x:String>Van</x:String>
+                        <x:String>Yozgat</x:String>
+                        <x:String>Zonguldak</x:String>
+                        <x:String>Aksaray</x:String>
+                        <x:String>Bayburt</x:String>
+                        <x:String>Karaman</x:String>
+                        <x:String>Kırıkkale</x:String>
+                        <x:String>Batman</x:String>
+                        <x:String>Şırnak</x:String>
+                        <x:String>Bartın</x:String>
+                        <x:String>Ardahan</x:String>
+                        <x:String>Iğdır</x:String>
+                        <x:String>Yalova</x:String>
+                        <x:String>Karabük</x:String>
+                        <x:String>Kilis</x:String>
+                        <x:String>Osmaniye</x:String>
+                        <x:String>Düzce</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Varış Noktası:" FontSize="18" />
+            <Picker 
+               x:Name="VarisYeri"
+                WidthRequest="500"
+                    HeightRequest="50" >
+                <Picker.ItemsSource  >
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Adana</x:String>
+                        <x:String>Adıyaman</x:String>
+                        <x:String>Afyonkarahisar</x:String>
+                        <x:String>Ağrı</x:String>
+                        <x:String>Amasya</x:String>
+                        <x:String>Ankara</x:String>
+                        <x:String>Antalya</x:String>
+                        <x:String>Artvin</x:String>
+                        <x:String>Aydın</x:String>
+                        <x:String>Balıkesir</x:String>
+                        <x:String>Bilecik</x:String>
+                        <x:String>Bingöl</x:String>
+                        <x:String>Bitlis</x:String>
+                        <x:String>Bolu</x:String>
+                        <x:String>Burdur</x:String>
+                        <x:String>Bursa</x:String>
+                        <x:String>Çanakkale</x:String>
+                        <x:String>Çankırı</x:String>
+                        <x:String>Çorum</x:String>
+                        <x:String>Denizli</x:String>
+                        <x:String>Diyarbakır</x:String>
+                        <x:String>Edirne</x:String>
+                        <x:String>Elazığ</x:String>
+                        <x:String>Erzincan</x:String>
+                        <x:String>Erzurum</x:String>
+                        <x:String>Eskişehir</x:String>
+                        <x:String>Gaziantep</x:String>
+                        <x:String>Giresun</x:String>
+                        <x:String>Gümüşhane</x:String>
+                        <x:String>Hakkari</x:String>
+                        <x:String>Hatay</x:String>
+                        <x:String>Isparta</x:String>
+                        <x:String>Mersin</x:String>
+                        <x:String>İstanbul</x:String>
+                        <x:String>İzmir</x:String>
+                        <x:String>Kars</x:String>
+                        <x:String>Kastamonu</x:String>
+                        <x:String>Kayseri</x:String>
+                        <x:String>Kırklareli</x:String>
+                        <x:String>Kırşehir</x:String>
+                        <x:String>Kocaeli</x:String>
+                        <x:String>Konya</x:String>
+                        <x:String>Kütahya</x:String>
+                        <x:String>Malatya</x:String>
+                        <x:String>Manisa</x:String>
+                        <x:String>Kahramanmaraş</x:String>
+                        <x:String>Mardin</x:String>
+                        <x:String>Muğla</x:String>
+                        <x:String>Muş</x:String>
+                        <x:String>Nevşehir</x:String>
+                        <x:String>Niğde</x:String>
+                        <x:String>Ordu</x:String>
+                        <x:String>Rize</x:String>
+                        <x:String>Sakarya</x:String>
+                        <x:String>Samsun</x:String>
+                        <x:String>Siirt</x:String>
+                        <x:String>Sinop</x:String>
+                        <x:String>Sivas</x:String>
+                        <x:String>Tekirdağ</x:String>
+                        <x:String>Tokat</x:String>
+                        <x:String>Trabzon</x:String>
+                        <x:String>Tunceli</x:String>
+                        <x:String>Şanlıurfa</x:String>
+                        <x:String>Uşak</x:String>
+                        <x:String>Van</x:String>
+                        <x:String>Yozgat</x:String>
+                        <x:String>Zonguldak</x:String>
+                        <x:String>Aksaray</x:String>
+                        <x:String>Bayburt</x:String>
+                        <x:String>Karaman</x:String>
+                        <x:String>Kırıkkale</x:String>
+                        <x:String>Batman</x:String>
+                        <x:String>Şırnak</x:String>
+                        <x:String>Bartın</x:String>
+                        <x:String>Ardahan</x:String>
+                        <x:String>Iğdır</x:String>
+                        <x:String>Yalova</x:String>
+                        <x:String>Karabük</x:String>
+                        <x:String>Kilis</x:String>
+                        <x:String>Osmaniye</x:String>
+                        <x:String>Düzce</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Fiyat:" FontSize="18" />
+            <Entry x:Name="FiyatEkle" Placeholder="Fiyatı girin" />
+
+            <Button Text="Seferi Ekle" 
+                    Clicked="btnKaydet_Clicked"
+                    BackgroundColor="#2196F3"
+                    TextColor="White" 
+                    CornerRadius="5" 
+                    FontSize="20" 
+                    FontAttributes="Bold"
+                    WidthRequest="200"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
